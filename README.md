@@ -41,6 +41,10 @@ Again: Please do not fail to submit the project on time, as it will prevent you 
 - The website posts section should contain 3 Project Categories of your choice. Make it something work related, for example "Websites", "UX Design", "Applications", "Cloud Services".
 - You should create 9 projects and spread them evenly into these categories. Project names must make sense. Project text can be left lorem ipsum, but all projects must contain the following: A screenshot, Client company name, completed date.
 - All posts must be properly tagged. Every post needs minimum 2 tags with the names of technologies used in the project. "PHP", "Wordpress", "Photoshop", "JavaScript", "NodeJS" ...
+
+
+
+
 - "About Me" page needs to contain a pretty portrait of youselves, and at least 4 paragraphs of any text or lorem ipsum.
 - Welcome page should contain: "A simple welcome statement paragraph. Not lorem ipsum.", and a cute large welcome image. + "3 imaginary quotes from satisfied clients, with small-ish photos of these people." This page should also be set as the static front page in settings.
 - Contact page should include some contact information, as well as a link to some nice google maps location. Also a textual representation of this address where your imaginary HQ is located.
