@@ -41,16 +41,18 @@ Again: Please do not fail to submit the project on time, as it will prevent you 
 - The website posts section should contain 3 Project Categories of your choice. Make it something work related, for example "Websites", "UX Design", "Applications", "Cloud Services".
 - You should create 9 projects and spread them evenly into these categories. Project names must make sense. Project text can be left lorem ipsum, but all projects must contain the following: A screenshot, Client company name, completed date.
 - All posts must be properly tagged. Every post needs minimum 2 tags with the names of technologies used in the project. "PHP", "Wordpress", "Photoshop", "JavaScript", "NodeJS" ...
-
-
-
-
 - "About Me" page needs to contain a pretty portrait of youselves, and at least 4 paragraphs of any text or lorem ipsum.
 - Welcome page should contain: "A simple welcome statement paragraph. Not lorem ipsum.", and a cute large welcome image. + "3 imaginary quotes from satisfied clients, with small-ish photos of these people." This page should also be set as the static front page in settings.
 - Contact page should include some contact information, as well as a link to some nice google maps location. Also a textual representation of this address where your imaginary HQ is located.
 - My Work page should be left empty for now.
 
 --- Take a breath... Ok... Go... ---
+
+
+
+
+
+
 
 - Remember to `git commit` often, and to write propper messages! I expect the following to be AT LEAST 5 commits.
 - Let's practice some basic RegExes now. Create a gitignore file where you ignore `wp-config.php`, `node_modules`, windows, linux and macOS hidden files, as well as `.htaccess`. These are all the regex rules you need to follow. 
@@ -63,7 +65,14 @@ Again: Please do not fail to submit the project on time, as it will prevent you 
 - Create a brand new empty theme named `Basic ACF Portfolio Theme`. The index.php file should contain only the line "This is index.php template" for now.
 - For now, while under development, the theme should contain SAE logo as a screenshot.
 - You were given an ugly HTML template by the lazy frontend developer, which you can find within the folder named `assets-week-3` in the root of the project. Move this folder inside your theme, so that we do not have any non essential items in the root. This move is also temporary, as we will be eventually deleteing the whole folder. Because of this temporary nature of this folder, you do not have to insert a "Scilence is golden" file.
+
+
+
+
+
 - Use our future front page HTML template (`main-page.html`) to create a header and footer template files. Implement those new files in the index template as we did multiple times in class and in homework so far.
+
+
 - Implement a simple custom title function named `custom_title` which will output the title in the same way as we did in class: `Site Title ~ Site Description`.
 - Find a way to add the CURRENT PAGE title to that function. For example: `Contact Page | Site Title ~ Site Description`.
 - Replace hardcoded site title at selector location `.navbar .navbar-brand` with the real Site Title.
