@@ -66,18 +66,24 @@ Again: Please do not fail to submit the project on time, as it will prevent you 
 - Find a way to set some pretty and more descriptive names for all four menu items in the Admin Panel. For example instead of "Contact", let it be "Hire me!".
 - Create a separate template for the static front page we created. The HTML used should be extracted from the `main-page.html`. The template MUST implement header and footer templates we created earlier, like we did in class.
 - There is a div on selector location `.container .row .col-lg-6` Find it, and empty its contents. Instead of those paragraphs, output the page content that you can set via Admin editor. Hint: We did this in class, remember the `the_post()` directive for loading the current page info? Leave the rest of the page like it is for now.
-
-
-
-
 - Create a basic `page.php` template from HTML `blank-page.html`. Like in the previous template, you must replace the contents of `.content` div with the real page content by using `the_content()` method. This is the page fallback template, so we do not have to specially assign it to any pages. Verify that it works for all pages except Home, by default.
+ Use the HTML from `about.html` page to create a custom page template named "About us Template". Replace content with real content at location `.container .row .col-lg-6`.
 
-- Use the HTML from `about.html` page to create a custom page template named "About us Template". Replace content with real content at location `.container .row .col-lg-6`.
+
+
+
+
 - Use the HTML from `my-work.html` page to create a custom page template named "Portfolio expose Template". Leave it as is, we will edit it in class.
+
 - Do the same for contact page. The custom template should be named `Contact Page with map`. No need to echo page content for now.
 - Do the same for 404 page. No need to echo page content, since it is a 404 page.
+
 - Do the same for `single-category.html` page. No need to edit anything. This template file must be named exactly `category.php`. We will explain this further in class. No need to edit the file for now.
 - Do the same for `portfolio-item.html` and name the template file exactly `single.php`. We will explain this further in class. Replace content with real content.
+
+
+
+
 - Bonus task: (NOT mandatory) Find a way to shorten content to a length of 180 character excerpt. Write a custom function that does this.
 - MANDATORY: Verify that everything works as specified.
 - Open up a pull request, and select me (`markomitranic`) as the review delegate in the right sidebar menu on the pull request page.
