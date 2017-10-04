@@ -64,16 +64,14 @@ Again: Please do not fail to submit the project on time, as it will prevent you 
 - Replace hardcoded site title at selector location `.navbar .navbar-brand` with the real Site Title.
 - Define a new menu zone in `functions.php` like we did in the class, named `main-menu`. Create the appropriate menu in Admin Panel, and assign it to this zone. Create menu items for Home, My Work, About me and Contact pages. Implement this menu in our theme header like we did in class.
 - Find a way to set some pretty and more descriptive names for all four menu items in the Admin Panel. For example instead of "Contact", let it be "Hire me!".
-
-
-
-
-
-
-
 - Create a separate template for the static front page we created. The HTML used should be extracted from the `main-page.html`. The template MUST implement header and footer templates we created earlier, like we did in class.
 - There is a div on selector location `.container .row .col-lg-6` Find it, and empty its contents. Instead of those paragraphs, output the page content that you can set via Admin editor. Hint: We did this in class, remember the `the_post()` directive for loading the current page info? Leave the rest of the page like it is for now.
+
+
+
+
 - Create a basic `page.php` template from HTML `blank-page.html`. Like in the previous template, you must replace the contents of `.content` div with the real page content by using `the_content()` method. This is the page fallback template, so we do not have to specially assign it to any pages. Verify that it works for all pages except Home, by default.
+
 - Use the HTML from `about.html` page to create a custom page template named "About us Template". Replace content with real content at location `.container .row .col-lg-6`.
 - Use the HTML from `my-work.html` page to create a custom page template named "Portfolio expose Template". Leave it as is, we will edit it in class.
 - Do the same for contact page. The custom template should be named `Contact Page with map`. No need to echo page content for now.
