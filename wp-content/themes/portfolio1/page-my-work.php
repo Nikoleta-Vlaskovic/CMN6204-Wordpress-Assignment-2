@@ -5,13 +5,14 @@
 ?>
 <?php get_header(); ?>
 <?php the_post(); ?>
-    <!-- Page Content -->
-    <div class="container">
 
-     <?php the_content(); ?>
+ <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+            <?php the_content(); ?>
+          </div>
+      </div>
+      <hr>
+ </div>
 
-    </div>
-    <!-- /.container -->
-
-    
 <?php get_footer(); ?>
