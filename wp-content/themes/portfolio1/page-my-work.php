@@ -1,18 +1,14 @@
 <?php 
-
-// Template Name: Portfolio expose Template
-
+ // Template Name: Portfolio expose Template
+get_header();
+the_post();
 ?>
-<?php get_header(); ?>
-<?php the_post(); ?>
-
- <div class="container">
+<div class="container">
       <div class="row">
           <div class="col-lg-6">
-            <?php the_content(); ?>
+            <?php the_post(); ?>
           </div>
       </div>
-      <hr>
  </div>
 
 <?php get_footer(); ?>

@@ -1,5 +1,8 @@
-<?php get_header(); ?>
-<?php the_post(); ?>
+<?php 
+get_header();  
+the_post();
+?>
+
   <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -48,8 +51,7 @@
             <?php the_content(); ?>
         </div>
       </div>
-      <!-- /.row -->
-
+   
       <hr>
 
     </div>

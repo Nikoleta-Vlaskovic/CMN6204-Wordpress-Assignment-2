@@ -1,10 +1,8 @@
 <?php 
-
 // Template Name: About Us Template
-
+get_header();
+the_post();
 ?>
-<?php get_header(); ?>
-<?php the_post(); ?>
 
     <!-- Page Content -->
     <div class="container">
@@ -27,10 +25,7 @@
           <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
         </div>
         <div class="col-lg-6">
-          <h2>About Modern Business</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+          <?php the_content() ?>
         </div>
       </div>
       <!-- /.row -->
