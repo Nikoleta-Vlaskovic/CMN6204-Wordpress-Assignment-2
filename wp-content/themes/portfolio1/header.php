@@ -9,12 +9,10 @@
      <meta name="author" content="">
  
      <title> <?= custom_title(); ?> </title>
+
+     <?php wp_head(); ?>
  
-     <!-- Bootstrap core CSS -->
-     <link href="/wp-content/themes/portfolio1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
  
-     <!-- Custom styles for this template -->
-     <link href="/wp-content/themes/portfolio1/css/modern-business.css" rel="stylesheet">
  
   </head>
  
