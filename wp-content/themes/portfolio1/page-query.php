@@ -33,4 +33,39 @@ echo '<h1>Let\'s try a more advanced example of a Query:<br>I am looking for all
 		echo '<br>';
 	}
 
+
+echo '<h1>#Task 1</h1>';
+
+    $lastMod = new WP_Query([
+    'post_type' => 'post',
+    'orderby' => 'modified',
+    'posts_per_page' => 2
+]);
+    while($lastMod->have_posts()) {
+        $lastMod->the_post();
+         echo the_title();
+         echo "<br>";
+
+};
+wp_reset_postdata();
+
+echo "<h1>#Task 2</h1>";
+        $allPages = new WP_Query([
+            'post_type' => 'page',
+            'order' => 'DSC'
+] );
+    while($allPages->have_posts()){
+    $allPages->the_post();
+    echo the_title();
+    echo "<br>";
+};
+wp_reset_postdata();
+
+
+
+
+
+
+
+
 ?>
