@@ -61,11 +61,43 @@ echo "<h1>#Task 2</h1>";
 };
 wp_reset_postdata();
 
-
-
-
-
-
+echo "<h1>#Task 3</h1>";
+    $postDate = new WP_Query([
+        'post_type' => 'post',
+        'orederby' => 'date',
+        'order' => 'DSC'
+] );
+    while($postDate->have_posts()){
+        $postDate->the_post();
+         echo get_the_date();
+          echo "<br>";
+};
+wp_reset_postdata();
+   echo "<h1>#Task 4</h1>";
+$posts = new WP_Query([
+    'post-type' => 'post',
+    'tag' => 'photoshop, php '
+]);
+while ($posts->have_posts()) {
+    $posts->the_post();
+    $posts_title = the_title();
+    $posts_tag = the_tags(' | Tags: ', ',');
+    echo $posts_title . $posts_tag;
+    echo "<br>";
+}
+echo "<h1>#Task 5</h1>";
+$posts = new WP_Query([
+    'post-type' => 'post',
+    'tag' => 'photoshop, php',
+    'posts_per_page' => 3
+]);
+while ($posts->have_posts()) {
+    $posts->the_post();
+    $posts_title = the_title();
+    $posts_tag = the_tags(' | Tags: ', ',');
+    echo $posts_title . $posts_tag;
+    echo "<br>";
+}
 
 
 ?>
