@@ -22,8 +22,8 @@ echo '<h1>Now let\'s look at what get_posts does.<br>Note that i have added a po
 echo '<h1>Let\'s try a more advanced example of a Query:<br>I am looking for all "posts" from the category "front-end", that are tagged "css". I want them to be ordered by "modified date" and presented in ascending order. *your category and tag names may differ</h1>';
 	$query = new WP_Query([
 		'post_type' => 'post',
-		'category_in' => 'front-end',
-		'tag' => 'css',
+		'category_in' => 'application',
+		'tag' => 'php',
 		'orderby' => 'modified',
 		'order' => 'ASC',
 	]);
@@ -33,4 +33,4 @@ echo '<h1>Let\'s try a more advanced example of a Query:<br>I am looking for all
 		echo '<br>';
 	}
 
-?>s
+?>
