@@ -76,7 +76,7 @@ wp_reset_postdata();
    echo "<h1>#Task 4</h1>";
 $posts = new WP_Query([
     'post-type' => 'post',
-    'tag' => 'photoshop, php '
+    'tag' => 'css, php '
 ]);
 while ($posts->have_posts()) {
     $posts->the_post();
@@ -84,7 +84,8 @@ while ($posts->have_posts()) {
     $posts_tag = the_tags(' | Tags: ', ',');
     echo $posts_title . $posts_tag;
     echo "<br>";
-}
+};
+
 echo "<h1>#Task 5</h1>";
 $posts = new WP_Query([
     'post-type' => 'post',
@@ -97,7 +98,47 @@ while ($posts->have_posts()) {
     $posts_tag = the_tags(' | Tags: ', ',');
     echo $posts_title . $posts_tag;
     echo "<br>";
+};
+
+wp_reset_postdata();
+
+    echo "<h1>#Task 7</h1>";
+        $findA = new WP_Query([
+            'pagename' =>'contact'
+]);
+    while($findA->have_posts()){
+        $findA->the_post();
+            $user = get_user_by('id',1);
+                echo 'Username is:'. ' ' .$user->user_nicename. '<br>' .' email is:'. ' '.$user->user_email  ;
+};
+wp_reset_postdata();
+
+echo "<h1>#Task 8</h1>";
+$posts = get_posts([
+    'post_type' => 'post',
+    'category_name' => 'websites',
+    'posts_per_page' => -1,
+    'orderby' => 'title',
+    'order' => 'ASC'
+]);
+
+foreach ($posts as $post) {
+    var_dump($post);
 }
+wp_reset_postdata();
 
 
-?>
+
+echo "<h1>#Task 9</h1>";
+    $postC = new WP_Query([
+        'post_type' => 'post',
+        'category_in' => 2,
+        'order' => 'ASC'
+] );
+while($postC->have_posts()){
+    $postC->the_post();
+    $user = get_user_by('id','1');
+    echo '<ol>'.'<li>'.the_title().'['.$user->user_nicename.']'.get_the_date().'</li>'.'</ol>';
+    echo "<br>";
+};
+wp_reset_postdata();
