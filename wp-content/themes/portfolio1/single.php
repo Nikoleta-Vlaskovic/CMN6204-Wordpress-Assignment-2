@@ -41,29 +41,36 @@ get_post();
 
       <div class="row">
 
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
 
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
+          <?php
 
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
+            $current_id = get_the_ID();
 
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
+
+
+             $related_posts = new WP_Query([
+               'post-type' => 'post',
+               'orderby' => 'rand',
+               'category__in' => wp_get_post_categories($post->ID),
+               'post__not_in'=> [$current_id]
+          ]);
+    
+              while ($related_posts->have_posts()) :
+               $related_posts->the_post();
+               $posts_title = get_the_title();
+           ?>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <?= $posts_title ?>
+            <a href="<?= get_permalink() ?>">
+              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            </a>
+          </div>
+
+          <?php
+          endwhile;
+          wp_reset_postdata();
+          ?>
 
       </div>
       <!-- /.row -->
