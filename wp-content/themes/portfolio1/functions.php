@@ -83,6 +83,10 @@ function custom_scripts () {
 
 }
 
+add_image_size('Portfolio Featured', 700, 500, true);
+add_image_size('Hero', 1920, 1080, true);
+
+
 
 ?>
 
