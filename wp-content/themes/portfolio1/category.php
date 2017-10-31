@@ -32,15 +32,19 @@ the_post();
     $posts_title = get_the_title();
     ?>
 
+    <?php
+    $url = get_field('hero_image')['sizes']['Portfolio Featured'];
+    ?>
+
     <div class="row">
       <div class="col-md-7">
         <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="<?= $url ?>" alt="">
         </a>
       </div>
       <div class="col-md-5">
         <h3><?= $posts_title ?></h3>
-        <p><?php excerpt(get_the_content()) ?></p>
+        <p><?= excerpt(get_the_content()) ?></p>
         <a class="btn btn-primary" href="<?= get_permalink() ?>">View Project
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>

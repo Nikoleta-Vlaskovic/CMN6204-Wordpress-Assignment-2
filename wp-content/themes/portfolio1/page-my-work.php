@@ -19,8 +19,12 @@ the_post()
     <li class="breadcrumb-item active">Services</li>
   </ol>
 
+  <?php  
+  $hero_image = get_field('slika');
+  ?>
+
   <!-- Image Header -->
-  <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
+  <img class="img-fluid rounded mb-4" src="<?= $hero_image['sizes']['large'] ?>" alt="<?= $hero_image['alt'] ?>">
 
   <!-- Marketing Icons Section -->
   <div class="row">
@@ -28,8 +32,7 @@ the_post()
     <?php
     $categories = get_categories();
     foreach ($categories as $category ) :
-      // var_dump($category);
-    ?>
+      ?>
 
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
@@ -43,7 +46,7 @@ the_post()
         </div>
       </div>
 
-    <?php
+      <?php
     endforeach;
     wp_reset_postdata();
     ?>
