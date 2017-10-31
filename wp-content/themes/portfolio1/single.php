@@ -61,6 +61,7 @@ the_post();
     while ($related_posts->have_posts()) :
       $related_posts->the_post();
       $posts_title = get_the_title();
+      
       $url = get_field('hero_image')['sizes']['thumbnail'];
       ?>
       
