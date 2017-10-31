@@ -19,10 +19,16 @@ the_post();
         <li class="breadcrumb-item active">About</li>
       </ol> 
 
+      <?php 
+
+        $url = get_field('my_portrait')['sizes']['large'];
+
+      ?>
+
       <!-- Intro Content -->
       <div class="row">
         <div class="col-lg-6">
-          <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
+          <img class="img-fluid rounded mb-4" src="<?=$url ?>" alt="">
         </div>
         <div class="col-lg-6">
           <?php the_content() ?>
@@ -33,24 +39,23 @@ the_post();
       <!-- Our Customers -->
       <h2>Our Customers</h2>
       <div class="row">
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
+
+      <?php
+
+        while ( have_rows('customers') ) : the_row();
+        $url = get_sub_field('logo')['url'];
+ 
+       ?>
+ 
+      <div class="col-lg-2 col-sm-4 mb-4">
+          <img class="img-fluid" src="<?= $url ?>" alt="">
+     </div>
+ 
+       <?php
+          endwhile;
+        ?>
+ 
+        
       </div>
       <!-- /.row -->
 
